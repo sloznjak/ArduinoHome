@@ -1,0 +1,46 @@
+<!--
+  Generated template for the Security page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Security</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label>Motion Sensor</ion-label>
+            <ion-toggle [(ngModel)]="motionSensor"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Laser Tripwire</ion-label>
+            <ion-toggle [(ngModel)]="laserTripwire"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Enterance Door Status</ion-label>
+            <ion-toggle [(ngModel)]="doorStatus"></ion-toggle>
+        </ion-item>
+    </ion-list>
+
+    <ion-card color="secondary" *ngIf="doorStatus">
+        <ion-card-content>
+            Enterance door are closed! <i class="fa fa-shield" style="float: right"></i>
+            <div style="clear:both"></div>
+        </ion-card-content>
+    </ion-card>
+    <ion-card color="danger" *ngIf="doorStatus">
+        <ion-card-content>
+            Enterance door are open! <i class="fa fa-shield" style="float: right"></i>
+            <div style="clear:both"></div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

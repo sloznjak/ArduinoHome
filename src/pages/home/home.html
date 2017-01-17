@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content>
+        </ion-refresher-content>
+    </ion-refresher>
+
+
+    <ion-grid>
+        <ion-row>
+            <ion-col width-50>
+                <ion-card (click)="temperature()">
+                    <ion-card-header>
+                        Temperature
+                    </ion-card-header>
+                    <ion-card-content class="largeFont">
+                        <ion-icon name="thermometer"></ion-icon>
+                        24°C
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col width-50>
+                <ion-card (click)="humidity()">
+                    <ion-card-header>
+                        Humidity
+                    </ion-card-header>
+                    <ion-card-content class="largeFont">
+                        <ion-icon name="water"></ion-icon>
+                        60%
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col width-50>
+                <ion-card (click)="lights()">
+                    <ion-card-header>
+                        Lights (0/6)
+                    </ion-card-header>
+                    <ion-card-content class="largeFont">
+                        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col width-50>
+                <ion-card (click)="security()">
+                    <ion-card-header>
+                        Security (1/3)
+                    </ion-card-header>
+                    <ion-card-content class="largeFont">
+                        <i class="fa fa-shield" aria-hidden="true"></i>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-card color="secondary" *ngIf="doorStatus" (click)="doorStatus =! doorStatus">
+                <ion-card-content>
+                    Enterance door are closed! <i class="fa fa-shield" style="float: right"></i>
+                    <div style="clear:both"></div>
+                </ion-card-content>
+            </ion-card>
+        </ion-row>
+    </ion-grid>
+</ion-content>

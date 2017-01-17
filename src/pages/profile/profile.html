@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Profile
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary" floating >Username</ion-label>
+            <ion-input [(ngModel)]="username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" floating >First Name</ion-label>
+            <ion-input [(ngModel)]="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" floating >Last Name</ion-label>
+            <ion-input [(ngModel)]="surname"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" floating >E-mail</ion-label>
+            <ion-input [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" floating>Address</ion-label>
+            <ion-input [(ngModel)]="address"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" floating >Phone number</ion-label>
+            <ion-input [(ngModel)]="phone"></ion-input>
+        </ion-item>
+
+    </ion-list>
+    <button ion-button full (click)="togglePssw = !togglePssw">CHANGE PASSWORD</button>
+    <div *ngIf="togglePssw">
+        <ion-item>
+            <ion-label color="primary" floating>New Password</ion-label>
+            <ion-input type="password" [(ngModel)]="newPssw"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" floating >Confirm Password</ion-label>
+            <ion-input type="password" [(ngModel)]="confPssw"></ion-input>
+        </ion-item>
+    </div>
+
+    <button ion-button full (click)="save()">SAVE CHANGES</button>
+</ion-content>

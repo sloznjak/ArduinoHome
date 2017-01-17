@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Settings
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label>Send notifications on mail</ion-label>
+            <ion-toggle [(ngModel)]="sendOnMail"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Auto refresh</ion-label>
+            <ion-toggle [(ngModel)]="autoRefresh"></ion-toggle>
+        </ion-item>
+        <ion-item *ngIf="autoRefresh">
+            <ion-label>Refresh frequency</ion-label>
+            <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
+    </ion-list>
+    <button ion-button full (click)="clear()">CLEAR HISTORY</button>
+    <button ion-button full (click)="logout()">LOGOUT</button>
+</ion-content>

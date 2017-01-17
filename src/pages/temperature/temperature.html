@@ -1,0 +1,108 @@
+<!--
+  Generated template for the Temperature page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Temperature</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header class="largeFont">
+            Temperature
+
+            <div style="float:right;">
+                24°C
+            </div>
+            <div style="clear: both;"></div>
+        </ion-card-header>
+    </ion-card>
+
+    <ion-item-group>
+        <ion-item-divider color="light" (click)="toggleFirst = !toggleFirst">10.01.2017</ion-item-divider>
+        <div *ngIf="toggleFirst">
+            <ion-item>
+                23:00
+                <div style="float:right;">
+                    24°C
+                </div>
+                <div style="clear: both;"></div>
+            </ion-item>
+            <ion-item>
+                22:00
+                <div style="float:right;">
+                    24°C
+                </div>
+                <div style="clear: both;"></div>
+            </ion-item>
+            <ion-item>
+                21:00
+                <div style="float:right;">
+                    23°C
+                </div>
+                <div style="clear: both;"></div>
+            </ion-item>
+            <ion-item>
+                20:00
+                <div style="float:right;">
+                    22°C
+                </div>
+                <div style="clear: both;"></div>
+            </ion-item>
+            <ion-item>
+                19:00
+                <div style="float:right;">
+                    19°C
+                </div>
+                <div style="clear: both;"></div>
+            </ion-item>
+        </div>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light" (click)="toggleSecond = !toggleSecond">09.01.2017</ion-item-divider>
+        <div *ngIf="toggleSecond">
+            <ion-item>
+                23:00
+                <div style="float:right;">
+                    22°C
+                </div>
+                <div style="clear: both;"></div>
+            </ion-item>
+            <ion-item>
+                22:00
+                <div style="float:right;">
+                    21°C
+                </div>
+                <div style="clear: both;"></div>
+            </ion-item>
+            <ion-item>
+                21:00
+                <div style="float:right;">
+                    22°C
+                </div>
+                <div style="clear: both;"></div>
+            </ion-item>
+            <ion-item>
+                20:00
+                <div style="float:right;">
+                    20°C
+                </div>
+                <div style="clear: both;"></div>
+            </ion-item>
+            <ion-item>
+                19:00
+                <div style="float:right;">
+                    19°C
+                </div>
+                <div style="clear: both;"></div>
+            </ion-item>
+        </div>
+    </ion-item-group>
+</ion-content>
