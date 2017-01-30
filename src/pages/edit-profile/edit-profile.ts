@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
+import {NavController, NavParams, ToastController} from 'ionic-angular';
 
-import {NavController, ToastController} from 'ionic-angular';
+/*
+  Generated class for the EditProfile page.
 
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+*/
 @Component({
-    selector: 'page-profile',
-    templateUrl: 'profile.html'
+  selector: 'page-edit-profile',
+  templateUrl: 'edit-profile.html'
 })
-export class ProfilePage {
+export class EditProfilePage {
     private togglePssw: boolean = false;
     private username: string = "sloznjak";
     private name: string = "Stjepan";
@@ -18,11 +23,14 @@ export class ProfilePage {
     private newPssw: string = "";
     private confPssw: string = "";
 
-    constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {}
 
-    }
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad EditProfilePage');
+  }
 
     save(){
+        this.togglePssw = false;
         this.presentToast();
     }
 
@@ -34,4 +42,5 @@ export class ProfilePage {
         });
         toast.present();
     }
+
 }

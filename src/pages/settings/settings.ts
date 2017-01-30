@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import {NavController, App, AlertController, ToastController} from 'ionic-angular';
 import {LoginPage} from "../login/login";
+import {EditProfilePage} from "../edit-profile/edit-profile";
 
 @Component({
     selector: 'page-settings',
@@ -12,6 +13,10 @@ export class SettingsPage {
 
     constructor(public navCtrl: NavController, public app: App, public alertCtrl: AlertController, public toastCtrl: ToastController) {
 
+    }
+
+    editProfile(){
+        this.navCtrl.push(EditProfilePage);
     }
 
     logout(){

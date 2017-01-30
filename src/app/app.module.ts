@@ -6,17 +6,19 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage} from "../pages/login/login";
 import { RegisterPage } from "../pages/register/register";
 import { SettingsPage } from "../pages/settings/settings";
-import { ProfilePage } from "../pages/profile/profile";
 import {LightsPage} from "../pages/lights/lights";
 import {SecurityPage} from "../pages/security/security";
 import {RgbLedStripPage} from "../pages/rgb-led-strip/rgb-led-strip";
 import {TemperaturePage} from "../pages/temperature/temperature";
 import {HumidityPage} from "../pages/humidity/humidity";
+import {EditProfilePage} from "../pages/edit-profile/edit-profile";
+import {TasksPage} from "../pages/tasks/tasks";
+import {AddTaskPage} from "../pages/add-task/add-task";
 
 @NgModule({
     declarations: [
         MyApp,
-        ProfilePage,
+        TasksPage,
         SettingsPage,
         HomePage,
         TabsPage,
@@ -26,7 +28,9 @@ import {HumidityPage} from "../pages/humidity/humidity";
         SecurityPage,
         RgbLedStripPage,
         TemperaturePage,
-        HumidityPage
+        HumidityPage,
+        EditProfilePage,
+        AddTaskPage
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -34,7 +38,7 @@ import {HumidityPage} from "../pages/humidity/humidity";
     bootstrap: [IonicApp],
     entryComponents: [
         MyApp,
-        ProfilePage,
+        TasksPage,
         SettingsPage,
         HomePage,
         TabsPage,
@@ -44,7 +48,9 @@ import {HumidityPage} from "../pages/humidity/humidity";
         SecurityPage,
         RgbLedStripPage,
         TemperaturePage,
-        HumidityPage
+        HumidityPage,
+        EditProfilePage,
+        AddTaskPage
     ],
     providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+                Tasks
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="addTask()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item-group>
+        <ion-item-divider color="light" (click)="toggleFirst = !toggleFirst">
+            17.01.2017.
+        </ion-item-divider>
+        <ion-item-group *ngIf="toggleFirst">
+            <ion-list>
+                <ion-item-sliding #item>
+                    <ion-item>
+                        18:30 Konzultacije
+                    </ion-item>
+                    <ion-item-options side="left">
+                        <button ion-button color="secondary" (click)="done(item)">Done</button>
+                    </ion-item-options>
+
+                    <ion-item-options side="right">
+                        <button ion-button (click)="delete(item)" color="danger">Delete</button>
+                    </ion-item-options>
+                </ion-item-sliding>
+                <ion-item-sliding #item>
+                    <ion-item>
+                        22:00 Spavanje
+                    </ion-item>
+                    <ion-item-options side="left">
+                        <button ion-button color="secondary" (click)="done(item)">Done</button>
+                    </ion-item-options>
+
+                    <ion-item-options side="right">
+                        <button ion-button (click)="delete(item)" color="danger">Delete</button>
+                    </ion-item-options>
+                </ion-item-sliding>
+            </ion-list>
+        </ion-item-group>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider color="light" (click)="toggleSecond = !toggleSecond">
+            18.01.2017.
+        </ion-item-divider>
+        <ion-item-group *ngIf="toggleSecond">
+            <ion-list>
+                <ion-item-sliding #item>
+                    <ion-item>
+                        13:00 Ručak
+                    </ion-item>
+                    <ion-item-options side="left">
+                        <button ion-button color="secondary" (click)="done(item)">Done</button>
+                    </ion-item-options>
+
+                    <ion-item-options side="right">
+                        <button ion-button (click)="delete(item)" color="danger">Delete</button>
+                    </ion-item-options>
+                </ion-item-sliding>
+            </ion-list>
+        </ion-item-group>
+    </ion-item-group>
+</ion-content>
